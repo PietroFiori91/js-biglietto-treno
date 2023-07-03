@@ -14,7 +14,7 @@ console.log("l'utente ha " + userAge + " anni.");
 
 // prezzo biglietto 
 
-const prezzoBiglietto = kmPercorsi * 0.21;
+const prezzoBiglietto = kmPercorsi * 0.21.toFixed(2);
 
 // GLI IF E GLI ELSE
 
@@ -29,13 +29,18 @@ if (userAge < 18) {
     console.log("L'utente ha diritto a" + " " + sconto40 + " " + "Euro" + " " + "di sconto");
 }
 
-// const finalPriceMinor = prezzoBiglietto - sconto20;
-// const finalPriceMajor = prezzoBiglietto - sconto40;
-// const finalPriceFull = prezzoBiglietto;
 
-// document.getElementById("prezzofinale").innerHTML=finalPriceMinor
+const sconto20 = (prezzoBiglietto * 20) / 100;
+const noSconto = prezzoBiglietto;
+const sconto40 = (prezzoBiglietto * 40) / 100;
 
-// document.getElementById("prezzofinale").innerHTML=finalPriceMajor
+const finalPriceMinor = prezzoBiglietto - sconto20;
+const finalPriceMajor = prezzoBiglietto - sconto40;
+const finalPriceFull = prezzoBiglietto;
 
-// document.getElementById("prezzofinale").innerHTML=finalPrice
+document.getElementById("prezzofinale").innerHTML = finalPriceMinor
+
+document.getElementById("prezzofinale").innerHTML = finalPriceMajor
+
+document.getElementById("prezzofinale").innerHTML = finalPriceFull
 
