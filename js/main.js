@@ -21,7 +21,7 @@ const prezzoBiglietto = (kmPercorsi * 0.21).toFixed(2);
 if (userAge <= 18) {
     const sconto20 = (prezzoBiglietto * 20) / 100;
     console.log("L'utente ha diritto a" + " " + sconto20 + " " + "Euro" + " " + "di sconto");
-} else if (userAge > 18 && userAge <= 65) {
+} else if (userAge > 18 && userAge < 65) {
     const noSconto = prezzoBiglietto;
     console.log("L'utente ha diritto a" + " " + 0 + " " + "Euro" + " " + "di sconto");
 } else {
